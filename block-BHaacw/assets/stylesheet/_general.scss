@@ -1,0 +1,153 @@
+body{
+    background-color: #3A4A4F;
+}
+/* flex */
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+a{
+    text-decoration: none;
+}
+.nav-bar li a{
+    color:rgb(35,157,195);
+    font-size: 1.3rem;
+}
+nav a {
+    font-size: 1.5rem;
+    color:#1F95BE;
+    font-weight: 500;
+    &:hover {
+        color: #F34423;
+    }
+}
+nav {
+    margin-bottom: 1.5rem;
+}
+
+
+.blue-border-white-div {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border-top: 0.25rem solid #1F95BE;
+    padding: 1rem 1.8rem;
+  }
+/* headings */
+  .heading-main, .heading-article {
+    text-transform: capitalize;
+  }
+
+  .heading-main {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .heading-article {
+    color: #3A4A4F;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+.article-2 {
+  grid-row: span 3; 
+}
+.article-4 {
+  grid-row: span 2; 
+}
+.img-cat {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  margin: 1rem auto;
+}
+.img-cat img {
+  border-radius: 50%;
+}
+.img-graph {
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem auto;
+  margin-bottom: 0rem;
+  max-width: 100%;
+}
+.para-article {
+  color: #3A4A4F; 
+  padding: 0 0.5rem;
+}
+.link-article {
+  color: #F34423;
+  font-weight: 500;
+  display:block;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+
+  &:hover {
+      background-color: #F34423;
+      color:#fff;
+  }
+}
+article:hover > h2 {
+background-color: #1F95BE;
+color:#fff;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  html {
+      font-size: 12px;
+  }
+  .container {
+      max-width: 720px;
+  }
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+  }
+  .article-2 {
+      order: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+      font-size: 10px;
+  }
+  .container {
+      max-width: 540px;
+  }
+  .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .article-2 {
+      order: 2;
+  }
+  .article-4 {
+      order: 1;
+  }
+  .article-3, 
+  .article-5, 
+  .article-6 {
+      order: 3;
+  }
+}
+  
