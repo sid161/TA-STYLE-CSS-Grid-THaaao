@@ -1,0 +1,57 @@
+.fa-bars, .fa-window-close {
+    font-size: 2rem;
+    color: #8b5806;
+
+}
+ #toggle, .bars, .close {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+     body {
+         background-color: #fff;
+     }
+    .bars {
+        display: inline-block;
+    }
+    .nav-bar {
+        background-color: rgba(#fff, 0.9);
+        position: fixed;        
+    }
+   .nav-bar .header-margin {
+       margin: 0;
+   }
+   .nav-bar .brand {
+       font-size: 2rem;
+       margin-left: 0;
+   }
+   .nav-header {
+       display: none;
+       position: fixed;
+       top:0;
+       bottom:0;
+       left: 0;
+       right:0;
+       background-color: rgba($secondary-color, 0.9);
+       padding-top: 2rem;
+
+       a {
+           font-size: 2rem;
+           color: #915c07;
+           font-weight: 600;
+           text-shadow: 1px 1px 1px black;   
+       }
+   }
+   #toggle:checked ~.nav-header {
+       display: block;
+   } 
+   #toggle:checked ~.close {
+       display:block;
+       z-index: 2;
+   }
+   #toggle:checked ~.bars {
+       display: none;
+   }
+   .brand {
+       z-index: 2;
+   }
+}
